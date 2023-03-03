@@ -1,0 +1,522 @@
+
+<style name="global_typeface_primary_regular_type_10" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_0</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_11" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_1</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_12" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_2</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_14" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_3</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_16" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_4</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_20" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_6</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_22" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_7</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_25" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_8</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_28" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_9</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_32" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_10</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_36" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_11</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_40" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_4</item>
+    <item name="android:textSize">@dimen/global_fontsize_12</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_45" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_13</item>
+</style>
+
+<style name="global_typeface_primary_regular_type_51" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_14</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_10" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_0</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_11" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_1</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_12" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_2</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_14" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_3</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_16" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_4</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_20" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_6</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_22" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_7</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_25" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_8</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_28" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_9</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_32" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_10</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_36" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_11</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_40" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_4</item>
+    <item name="android:textSize">@dimen/global_fontsize_12</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_45" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_13</item>
+</style>
+
+<style name="global_typeface_primary_semibold_type_51" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_14</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_10" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_0</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_11" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_1</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_12" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_2</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_14" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_3</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_16" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_4</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_20" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_6</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_22" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_7</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_25" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_8</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_28" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_9</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_32" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_10</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_36" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_11</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_40" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_4</item>
+    <item name="android:textSize">@dimen/global_fontsize_12</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_45" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_13</item>
+</style>
+
+<style name="global_typeface_primary_bold_type_51" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_nunito</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_14</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_10" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_0</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_11" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_1</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_12" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_2</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_14" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_3</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_16" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_4</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_18" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_6</item>
+    <item name="android:textSize">@dimen/global_fontsize_5</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_20" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_6</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_22" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_7</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_25" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_8</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_28" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_9</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_32" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_10</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_36" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_11</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_40" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_4</item>
+    <item name="android:textSize">@dimen/global_fontsize_12</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_45" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_13</item>
+</style>
+
+<style name="global_typeface_secondary_regular_type_51" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_14</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_10" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_0</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_11" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_1</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_12" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_2</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_14" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_3</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_16" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_4</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_18" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_6</item>
+    <item name="android:textSize">@dimen/global_fontsize_5</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_20" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_6</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_22" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_7</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_25" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_8</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_28" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_9</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_32" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_10</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_36" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_11</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_40" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_4</item>
+    <item name="android:textSize">@dimen/global_fontsize_12</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_45" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_13</item>
+</style>
+
+<style name="global_typeface_secondary_semibold_type_51" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_14</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_10" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_0</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_11" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_1</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_12" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_0</item>
+    <item name="android:textSize">@dimen/global_fontsize_2</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_14" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_3</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_16" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_1</item>
+    <item name="android:textSize">@dimen/global_fontsize_4</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_18" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_6</item>
+    <item name="android:textSize">@dimen/global_fontsize_5</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_20" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_6</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_22" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_7</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_25" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_8</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_28" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_2</item>
+    <item name="android:textSize">@dimen/global_fontsize_9</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_32" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_10</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_36" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_3</item>
+    <item name="android:textSize">@dimen/global_fontsize_11</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_40" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_4</item>
+    <item name="android:textSize">@dimen/global_fontsize_12</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_45" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_13</item>
+</style>
+
+<style name="global_typeface_secondary_bold_type_51" parent="Widget.MaterialComponents.TextView">
+    <item name="android:fontFamily">@font/global_fontfamilies_inter</item>
+    <item name="android:lineHeight">@dimen/global_lineheights_5</item>
+    <item name="android:textSize">@dimen/global_fontsize_14</item>
+</style>
