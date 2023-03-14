@@ -70,32 +70,32 @@ class Compiler
                     $exp = explode(".", str_replace(["{", "}"], "", $value));
                     $xp = implode("_", $exp);
                     $newValue = "@color/global_$xp";
-                    // $this->outputToColorsXml($name, $newValue);
+                    $this->outputToColorsXml($name, $newValue);
                 } else {
 
-                    // $this->outputToColorsXml($name, $value);
+                    $this->outputToColorsXml($name, $value);
                 }
             }
 
             if (in_array($type, $this->config->dimens)) {
-                // if (is_numeric($value))
-                //     $this->outputToGlobalDimensXml($name, $value);
+                if (is_numeric($value))
+                    $this->outputToGlobalDimensXml($name, $value);
             }
 
             if (in_array($type, $this->config->globalIntegers)) {
-                // if (is_numeric($value))
-                // $this->outputToGlobalIntegersXml($name, $value);
+                if (is_numeric($value))
+                $this->outputToGlobalIntegersXml($name, $value);
             }
             if (in_array($type, $this->config->fontDimens)) {
-                // if (is_numeric($value))
-                // $this->outputToFontDimensXml($name, $value);
+                if (is_numeric($value))
+                $this->outputToFontDimensXml($name, $value);
             }
             if (in_array($type, $this->config->typography)) {
                 if ($isUsingGlobalRef) {
                     $exp = explode(".", str_replace(["{", "}", "@"], "", str_replace(["@"], "_", $value)));
                     $xp = strtolower(implode("_", $exp));
                     $tagBuka = '<style name="' . $name . '" parent="global_' . $xp . '"/>';
-                    // $this->outputToGlobalStylesXml(PHP_EOL . $tagBuka . PHP_EOL);
+                    $this->outputToGlobalStylesXml(PHP_EOL . $tagBuka . PHP_EOL);
                 }
             }
         } else {
@@ -104,25 +104,22 @@ class Compiler
                 $tagTutup = '</style>';
                 $content = "";
                 foreach ($value as $ii => $k) {
+                    $exp = explode(".", str_replace(["{", "}"], "", $k));
                     if (key_exists($ii, $this->config->textAppeareance)) {
                         if (is_array($this->config->textAppeareance[$ii])) {
-                            $newProp = explode($this->config->textAppeareance[$ii], ",");
-                            print_r($ii);
+                            $prop = explode(",", $this->config->textAppeareance[$ii]['prop']);
+                            $tools = explode(",", $this->config->textAppeareance[$ii]['tools']);
+                            foreach ($prop as $ki => $pp) {
+                                $content .=
+                                    '    <item name="' . $pp . '" ' . $tools[$ki] . '>@integer' .  strtolower("/global_$exp[0]_$exp[1]") . '</item>' . PHP_EOL;
+                            }
                         } else {
+                            $content .=
+                                '    <item name="' . $this->config->textAppeareance[$ii] . '">' . $this->config->styleRef[$ii] . strtolower("/global_$exp[0]_$exp[1]") . '</item>' . PHP_EOL;
                         }
-                        // if (is_array($k)) {
-                        //     foreach ($k as $prop) {
-                        //         $newProp = explode($prop, "-");
-                        //         echo implode("_", $newProp);
-                        //     }
-                        // } else {
-                        //     $exp = explode(".", str_replace(["{", "}"], "", $k));
-                        //     $content .=
-                        //         '    <item name="' . $this->config->textAppeareance[$ii] . '">' . $this->config->styleRef[$ii] . strtolower("/global_$exp[0]_$exp[1]") . '</item>' . PHP_EOL;
-                        // }
                     }
                 }
-                // $this->outputToGlobalStylesXml(PHP_EOL . $tagBuka . PHP_EOL . $content . $tagTutup . PHP_EOL);
+                $this->outputToGlobalStylesXml(PHP_EOL . $tagBuka . PHP_EOL . $content . $tagTutup . PHP_EOL);
             }
         }
     }
