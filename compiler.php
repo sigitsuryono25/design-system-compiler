@@ -1,30 +1,20 @@
 <?php
+include('config.php');
 include('constant/constant.php');
 include('helper/Helper.php');
 class Compiler
 {
     private $helper;
-    private $color = array("color", "colors");
-    private $dimens = array("lineHeights");
-    private $fontDimens = array("fontSizes");
-    private $typography = array("typography");
-    private $textAppeareance = array(
-        "fontFamily" => "android:fontFamily",
-        "lineHeight" => "android:lineHeight",
-        "fontSize" => "android:textSize",
-    );
-    private $styleRef = array(
-        "fontFamily" => "@font",
-        "lineHeight" => "@dimen",
-        "fontSize" => "@dimen",
-    );
+    private $config;
     private $globalArray = [];
     public function __construct($array)
     {
         $this->helper = new Helper();
         $this->globalArray = $array;
+        $this->config = new Config();
+        echo "Generate file...";
     }
-    function loopingArray($array, $name)
+    function loopingArray($array, $name, $isUsingGlobalRef)
     {
         $keys = array_keys($array);
         for ($i = 0; $i < count($array); $i++) {
@@ -35,7 +25,7 @@ class Compiler
                 if (array_key_exists("value", $array)) {
                     $values = $array["value"];
                 }
-                $this->output($name, $type, $values);
+                $this->output($name, $type, $values, $isUsingGlobalRef);
                 $name = str_replace("_$keys[$i]", "", $name);
                 break;
             } else if (is_array($array[$keys[$i]]) && array_key_exists("value", $array)) {
@@ -45,7 +35,7 @@ class Compiler
                 if (array_key_exists("value", $array)) {
                     $values = $array["value"];
                 }
-                $this->output($name, $type, $values);
+                $this->output($name, $type, $values, $isUsingGlobalRef);
                 $name = $keys[$i] . "_";
                 break;
             } else if (array_key_exists("value", $array)) {
@@ -55,54 +45,84 @@ class Compiler
                 if (array_key_exists("value", $array)) {
                     $values = $array["value"];
                 }
-                $this->output($name, $type, $values);
+                $this->output($name, $type, $values, $isUsingGlobalRef);
                 $name = $keys[$i] . "_";
                 break;
             } else if (!array_key_exists("value", $array)) {
                 $name .= $keys[$i] . "_";
-                echo "<b>$keys[$i]</b><br>";
                 $name = str_replace("_$keys[$i]]", "", $name);
                 if (is_array($array[$keys[$i]])) {
-                    $this->loopingArray($array[$keys[$i]], $name);
+                    $this->loopingArray($array[$keys[$i]], $name, $isUsingGlobalRef);
                 }
                 $name = str_replace("_$keys[$i]", "", $name);
             }
         }
     }
 
-    function output($name, $type, $value)
+    function output($name, $type, $value, $isUsingGlobalRef)
     {
         $name = strtolower($name);
-        $name = str_replace(["@", "-"], "_", $name);
+        $name = str_replace(["@", "-", " "], "_", $name);
         $name = substr($name, 0, strlen($name) - 1);
         if (!is_array($value) && !is_array($type)) {
-            echo "$name<br>$value<br>$type<br><br>";
-            if (in_array($type, $this->color)) {
-                $this->outputToColorsXml($name, $value);
+            if (in_array($type, $this->config->color)) {
+                if ($isUsingGlobalRef) {
+                    $exp = explode(".", str_replace(["{", "}"], "", $value));
+                    $xp = implode("_", $exp);
+                    $newValue = "@color/global_$xp";
+                    // $this->outputToColorsXml($name, $newValue);
+                } else {
+
+                    // $this->outputToColorsXml($name, $value);
+                }
             }
 
-            if (in_array($type, $this->dimens)) {
-                if (is_numeric($value))
-                    $this->outputToGlobalDimensXml($name, $value);
+            if (in_array($type, $this->config->dimens)) {
+                // if (is_numeric($value))
+                //     $this->outputToGlobalDimensXml($name, $value);
             }
-            if (in_array($type, $this->fontDimens)) {
-                if (is_numeric($value))
-                    $this->outputToFontDimensXml($name, $value);
+
+            if (in_array($type, $this->config->globalIntegers)) {
+                // if (is_numeric($value))
+                // $this->outputToGlobalIntegersXml($name, $value);
+            }
+            if (in_array($type, $this->config->fontDimens)) {
+                // if (is_numeric($value))
+                // $this->outputToFontDimensXml($name, $value);
+            }
+            if (in_array($type, $this->config->typography)) {
+                if ($isUsingGlobalRef) {
+                    $exp = explode(".", str_replace(["{", "}", "@"], "", str_replace(["@"], "_", $value)));
+                    $xp = strtolower(implode("_", $exp));
+                    $tagBuka = '<style name="' . $name . '" parent="global_' . $xp . '"/>';
+                    // $this->outputToGlobalStylesXml(PHP_EOL . $tagBuka . PHP_EOL);
+                }
             }
         } else {
-            if (in_array($type, $this->typography)) {
-                echo "$name<br>$type<br>";
+            if (in_array($type, $this->config->typography)) {
                 $tagBuka = '<style name="' . $name . '" parent="Widget.MaterialComponents.TextView">';
                 $tagTutup = '</style>';
                 $content = "";
                 foreach ($value as $ii => $k) {
-                    if (key_exists($ii, $this->textAppeareance)) {
-                        $exp = explode(".", str_replace(["{", "}"], "", $k));
-                        $content .=
-                            '    <item name="' . $this->textAppeareance[$ii] . '">' . $this->styleRef[$ii] . strtolower("/global_$exp[0]_$exp[1]") . '</item>' . PHP_EOL;
+                    if (key_exists($ii, $this->config->textAppeareance)) {
+                        if (is_array($this->config->textAppeareance[$ii])) {
+                            $newProp = explode($this->config->textAppeareance[$ii], ",");
+                            print_r($ii);
+                        } else {
+                        }
+                        // if (is_array($k)) {
+                        //     foreach ($k as $prop) {
+                        //         $newProp = explode($prop, "-");
+                        //         echo implode("_", $newProp);
+                        //     }
+                        // } else {
+                        //     $exp = explode(".", str_replace(["{", "}"], "", $k));
+                        //     $content .=
+                        //         '    <item name="' . $this->config->textAppeareance[$ii] . '">' . $this->config->styleRef[$ii] . strtolower("/global_$exp[0]_$exp[1]") . '</item>' . PHP_EOL;
+                        // }
                     }
                 }
-                $this->outputToGlobalStylesXml(PHP_EOL.$tagBuka . PHP_EOL . $content . $tagTutup . PHP_EOL);
+                // $this->outputToGlobalStylesXml(PHP_EOL . $tagBuka . PHP_EOL . $content . $tagTutup . PHP_EOL);
             }
         }
     }
@@ -122,8 +142,10 @@ class Compiler
         $dimensTag = '<dimen name="' . $name . '">' . $value . 'dp</dimen>' . PHP_EOL;
         $this->helper->writeToDimensResourceExist($dimensTag);
     }
-    function outputToGlobalIntegersXml()
+    function outputToGlobalIntegersXml($name, $value)
     {
+        $integersTag = '<integer name="' . $name . '">' . $value . '</integer>' . PHP_EOL;
+        $this->helper->writeToIntegersResourceExist($integersTag);
     }
     function outputToGlobalStringsXml()
     {

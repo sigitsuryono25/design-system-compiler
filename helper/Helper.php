@@ -1,19 +1,22 @@
 <?php
 include('header/header_tag.php');
+include('../config.php');
 class Helper
 {
     private $tag;
+    private $config;
 
     public function __construct()
     {
         $this->tag = new Headertag();
+        $this->config = new Config();
     }
     private function isColorResourceExist()
     {
-        if (!is_file('output/colors.xml')) {
-            return fopen("output/colors.xml", "a");
+        if (!is_file($this->config->colorsResourcePath)) {
+            return fopen($this->config->colorsResourcePath, "a");
         } else
-            return fopen("output/colors.xml", "a");
+            return fopen($this->config->colorsResourcePath, "a");
     }
     function writeToColorResourceExist($colorTag)
     {
@@ -29,10 +32,10 @@ class Helper
 
     function isFontDimensResourceExist()
     {
-        if (!is_file('output/fontDimens.xml')) {
-            return fopen("output/fontDimens.xml", "a");
+        if (!is_file($this->config->fontDimensResourcePath)) {
+            return fopen($this->config->fontDimensResourcePath, "a");
         } else
-            return fopen("output/fontDimens.xml", "a");
+            return fopen($this->config->fontDimensResourcePath, "a");
     }
     function writeToFontDimensResourceExist($dimensTag)
     {
@@ -47,10 +50,10 @@ class Helper
     }
     private function isDimensResourceExist()
     {
-        if (!is_file('output/dimens.xml')) {
-            return fopen("output/dimens.xml", "a");
+        if (!is_file($this->config->dimensResourcePath)) {
+            return fopen($this->config->dimensResourcePath, "a");
         } else
-            return fopen("output/dimens.xml", "a");
+            return fopen($this->config->dimensResourcePath, "a");
     }
     function writeToDimensResourceExist($dimensTag)
     {
@@ -63,11 +66,23 @@ class Helper
         // Close the file handler
         fclose($dimensXml);
     }
-    function isIntegersResourceExist()
+    private function isIntegersResourceExist()
     {
-        if (!is_file('output/integers.xml')) {
-            fopen("integers.xml", "w");
-        }
+        if (!is_file($this->config->integersResourcePath)) {
+            return fopen($this->config->integersResourcePath, "a");
+        } else
+            return fopen($this->config->integersResourcePath, "a");
+    }
+    function writeToIntegersResourceExist($integersTag)
+    {
+        $integersXml = $this->isIntegersResourceExist();
+        // Seek to the end
+        fseek($integersXml, SEEK_SET, 0);
+        // Get and save that position
+        // Write your data
+        fwrite($integersXml, $integersTag);
+        // Close the file handler
+        fclose($integersXml);
     }
     function isStringsResourceExist()
     {
@@ -78,10 +93,10 @@ class Helper
     
     private function isStyleResourceExist()
     {
-        if (!is_file('output/styles.xml')) {
-            return fopen("output/styles.xml", "a");
+        if (!is_file($this->config->stylesResourcePath)) {
+            return fopen($this->config->stylesResourcePath, "a");
         } else
-            return fopen("output/styles.xml", "a");
+            return fopen($this->config->stylesResourcePath, "a");
     }
 
     function writeToStylesResourceExist($styleValue)
