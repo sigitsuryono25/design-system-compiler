@@ -1,14 +1,11 @@
 <?php
-include('header/header_tag.php');
 include('../config.php');
 class Helper
 {
-    private $tag;
     private $config;
 
     public function __construct()
     {
-        $this->tag = new Headertag();
         $this->config = new Config();
     }
     private function isColorResourceExist()
@@ -89,8 +86,8 @@ class Helper
         if (!is_file('output/strings.xml')) {
             fopen("strings.xml", "w");
         }
-    } 
-    
+    }
+
     private function isStyleResourceExist()
     {
         if (!is_file($this->config->stylesResourcePath)) {

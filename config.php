@@ -1,16 +1,18 @@
 <?php
+
+/**
+ * if this value is TRUE, you have to include this lib into android project
+ * and make the specific file first. That shown on main constructor below. 
+ **/
+define('USING_ANDROID_OUTPUT', FALSE);
 class Config
 {
-    public function __construct()
-    {
-        error_reporting(0);
-    }
-    public $colorsResourcePath = "../app/src/main/res/values/colors.xml";
-    public $stringsResourcePath = "../app/src/main/res/values/strings.xml";
-    public $dimensResourcePath = "../app/src/main/res/values/dimens.xml";
-    public $fontDimensResourcePath = "../app/src/main/res/values/fontDimens.xml";
-    public $stylesResourcePath = "../app/src/main/res/values/styles.xml";
-    public $integersResourcePath = "../app/src/main/res/values/integers.xml";
+    public $colorsResourcePath = '';
+    public $stringsResourcePath = '';
+    public $dimensResourcePath = '';
+    public $fontDimensResourcePath = '';
+    public $stylesResourcePath = '';
+    public $integersResourcePath = '';
     public $color = array("color", "colors");
     public $dimens = array("lineHeights");
     public $fontDimens = array("fontSizes");
@@ -22,8 +24,8 @@ class Config
         "lineHeight" => "lineHeight",
         "fontSize" => "android:textSize",
         "fontWeight" => array(
-            "prop" => "android:fontWeight,android:textFontWeight,fontWeight",
-            "tools" => 'tools:targetApi="o",tools:targetApi="p",'
+            "prop" => "android:fontWeight,android:textFontWeight,fontWeight", //using comma to seperate the prop
+            "tools" => 'tools:targetApi="o",tools:targetApi="p",' //using comma to seperate the prop
         ),
     );
     public $styleRef = array(
@@ -31,4 +33,15 @@ class Config
         "lineHeight" => "@dimen",
         "fontSize" => "@dimen",
     );
+
+    public function __construct()
+    {
+        error_reporting(0);
+        $this->colorsResourcePath = (USING_ANDROID_OUTPUT) ? "../app/src/main/res/values/colors.xml" : 'output/colors.xml';
+        $this->stringsResourcePath = (USING_ANDROID_OUTPUT) ? "../app/src/main/res/values/strings.xml" : 'output/strings.xml';
+        $this->dimensResourcePath = (USING_ANDROID_OUTPUT) ? "../app/src/main/res/values/dimens.xml" : 'output/dimens.xml';
+        $this->fontDimensResourcePath = (USING_ANDROID_OUTPUT) ? "../app/src/main/res/values/fontDimens.xml" : 'output/fontDimens.xml';
+        $this->stylesResourcePath = (USING_ANDROID_OUTPUT) ? "../app/src/main/res/values/styles.xml" : 'output/styles.xml';
+        $this->integersResourcePath = (USING_ANDROID_OUTPUT) ? "../app/src/main/res/values/integers.xml" : 'output/integers.xml';
+    }
 }
